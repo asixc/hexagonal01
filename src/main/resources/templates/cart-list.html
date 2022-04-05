@@ -31,7 +31,13 @@
                 <th scope="row" th:text="${cart.id}"></th>
                 <td th:text="${cart.clientId}"></td>
                 <td th:text="${cart.created}"></td>
-                <td th:text="${cart.idPayment != null} ? 'Paid' : 'Pending'"></td>
+                <td>
+                    <a th:if="${cart.idPayment == null}"
+                       th:href="@{/carts/} + ${cart.id} + @{/paid}"
+                    ><button class="btn btn-primary">Mark as paid</button>
+                    </a>
+                    <span th:unless="${cart.idPayment == null}">Paid</span>
+                </td>
                 <td>
                     <li th:each="product: ${cart.products}">
                         "<span th:text="${product.name}"></span>" of category [
