@@ -19,3 +19,9 @@ Algunos ejemplos de casos de uso comentados en clase:
     * En base a tienda
     * En base a empleado
     * En base a donde reside customer
+
+***
+
+### Casos de uso escogidos:
+* 1 caso de uso: CRUD productos
+* 2 caso de uso: CRUD carrito compra
