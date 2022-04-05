@@ -1,27 +1,6 @@
-# Ejercicio 1
+### Ejercicio 1  16/03/2022
+Sobre la arquitectura hexagonal desarrollada agregar más adaptadores de entrada y de salida como los vistos en clase: cronjob, smtp, csv. A elección del alumno.
 
-Sobre el proyecto m01-hexagonal del día de hoy o sobre un proyecto nuevo con un objeto de dominio **Product** se añadirán **2 casos de uso** a elección del alumno con sus correspondientes adaptadores de entrada (web) y de salida (persistencia).
-
-Algunos ejemplos de casos de uso comentados en clase:
-
-* Registrar un nuevo usuario cliente (adaptador in /auth/register)
-* Iniciar sesión (usuario cliente)
-* Añadir un producto a un carrito
-* Finalizar compra de un carrito
-* Realizar pago (utiliza adaptador de pago, ej: paypal)
-* Calcular costes
-    * En base al coste de todos los productos en stock
-    * En base a los empleados
-    * En base al coste de cada tienda
-* Calcular beneficios
-    * En base a Tiempo
-    * En base a categoría de producto
-    * En base a tienda
-    * En base a empleado
-    * En base a donde reside customer
-
-***
-
-### Casos de uso escogidos:
-* 1 caso de uso: CRUD productos
-* 2 caso de uso: CRUD carrito compra
+### Casos de uso escogidos :
+* 1 caso de uso: Endpoint para generar csv con los carritos pagados.
+* 2 caso de uso: cartManager para añadir productos y guardar pago.

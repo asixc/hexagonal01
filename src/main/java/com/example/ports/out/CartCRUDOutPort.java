@@ -2,6 +2,8 @@ package com.example.ports.out;
 
 import com.example.core.domain.Cart;
 
+import java.util.List;
+
 public interface CartCRUDOutPort {
 
     Cart findById(Long id);
@@ -11,5 +13,7 @@ public interface CartCRUDOutPort {
     Cart update(Cart cart);
 
     void deleteById(Long id);
+
+    List<Cart> findAll();
 
 }

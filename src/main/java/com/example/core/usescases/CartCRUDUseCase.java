@@ -4,6 +4,8 @@ import com.example.core.domain.Cart;
 import com.example.ports.in.CartCRUDInPort;
 import com.example.ports.out.CartCRUDOutPort;
 
+import java.util.List;
+
 public class CartCRUDUseCase implements CartCRUDInPort {
 
     private CartCRUDOutPort port;
@@ -30,5 +32,10 @@ public class CartCRUDUseCase implements CartCRUDInPort {
     @Override
     public void deleteById(Long id) {
         this.port.deleteById(id);
+    }
+
+    @Override
+    public List<Cart> getAllCarts() {
+        return this.port.findAll();
     }
 }

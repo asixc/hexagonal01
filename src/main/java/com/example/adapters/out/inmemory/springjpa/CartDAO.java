@@ -3,7 +3,9 @@ package com.example.adapters.out.inmemory.springjpa;
 import com.example.core.domain.Cart;
 import com.example.ports.out.CartCRUDOutPort;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class CartDAO implements CartCRUDOutPort {
 
@@ -36,5 +38,10 @@ public class CartDAO implements CartCRUDOutPort {
     @Override
     public void deleteById(Long id) {
         this.cartRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Cart> findAll() {
+        return this.cartRepository.findAll().stream().map(CartEntityMapper::of).collect(Collectors.toList());
     }
 }
