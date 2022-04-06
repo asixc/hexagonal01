@@ -22,7 +22,7 @@ public class CartEntity implements Serializable {
     private LocalDateTime created;
     private UUID idPayment;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<ProductEntity> products = new ArrayList<>();
 
     public CartEntity() {

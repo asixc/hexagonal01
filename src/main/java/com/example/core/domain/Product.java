@@ -64,6 +64,9 @@ public class Product {
     public void setStock(Integer stock) {
         this.stock = stock;
     }
+    public void reduceStock() {
+        this.stock--;
+    }
 
     public LocalDateTime getCreationDate() {
         return creationDate;

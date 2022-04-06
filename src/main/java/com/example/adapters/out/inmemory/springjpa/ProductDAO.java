@@ -3,7 +3,9 @@ package com.example.adapters.out.inmemory.springjpa;
 import com.example.core.domain.Product;
 import com.example.ports.out.ProductCRUDOutPort;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class ProductDAO implements ProductCRUDOutPort{
 
@@ -34,5 +36,10 @@ public class ProductDAO implements ProductCRUDOutPort{
     @Override
     public void deleteById(Long id) {
         this.productRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Product> findAll() {
+        return this.productRepository.findAll().stream().map(ProductEntityMapper::of).collect(Collectors.toList());
     }
 }

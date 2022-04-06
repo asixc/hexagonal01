@@ -44,4 +44,9 @@ public class CartDAO implements CartCRUDOutPort {
     public List<Cart> findAll() {
         return this.cartRepository.findAll().stream().map(CartEntityMapper::of).collect(Collectors.toList());
     }
+
+    @Override
+    public List<Cart> findAllCartsPaid() {
+        return this.cartRepository.findByIdPaymentIsNotNull().stream().map(CartEntityMapper::of).collect(Collectors.toList());
+    }
 }

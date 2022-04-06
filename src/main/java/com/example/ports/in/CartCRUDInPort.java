@@ -15,4 +15,6 @@ public interface CartCRUDInPort {
     void deleteById(Long id);
 
     List<Cart> getAllCarts();
+
+    List<Cart> getAllCartsPaid();
 }

@@ -4,6 +4,8 @@ import com.example.core.domain.Product;
 import com.example.ports.in.ProductCRUDInPort;
 import com.example.ports.out.ProductCRUDOutPort;
 
+import java.util.List;
+
 public class ProductCRUDUseCase implements ProductCRUDInPort {
 
     private ProductCRUDOutPort port;
@@ -30,5 +32,10 @@ public class ProductCRUDUseCase implements ProductCRUDInPort {
     @Override
     public void deleteById(Long id) {
         this.port.deleteById(id);
+    }
+
+    @Override
+    public List<Product> findAll() {
+        return this.port.findAll();
     }
 }

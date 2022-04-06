@@ -16,4 +16,6 @@ public interface CartCRUDOutPort {
 
     List<Cart> findAll();
 
+    List<Cart> findAllCartsPaid();
+
 }

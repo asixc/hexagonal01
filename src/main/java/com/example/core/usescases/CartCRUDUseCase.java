@@ -38,4 +38,8 @@ public class CartCRUDUseCase implements CartCRUDInPort {
     public List<Cart> getAllCarts() {
         return this.port.findAll();
     }
+    @Override
+    public List<Cart> getAllCartsPaid() {
+        return this.port.findAllCartsPaid();
+    }
 }
